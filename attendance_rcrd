@@ -1,0 +1,14 @@
+class Student:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+        self.attendance = []
+
+    def mark_attendance(self, status):
+        self.attendance.append(status)
+
+def display_attendance(student):
+    print(f"Student Name: {student.name}, ID: {student.id}")
+    print("Attendance:")
+    for date, status in enumerate(student.attendance):
+        print(f"{date + 1}: {'Present' if status else 'Absent'}")
